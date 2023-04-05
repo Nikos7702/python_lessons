@@ -1,5 +1,5 @@
-x = float(input("enter a first integer: "))
-y = float(input("enter a second integer: "))
+x = float(input("enter a first number: "))
+y = float(input("enter a second number: "))
 
 print('addition: ', x + y)
 print('subtraction: ', x - y)
