@@ -1,7 +1,8 @@
-user_input = input('текст: ')
-my_text = ''
-for i in range(len(user_input)):
-    if user_input[i] == ' ' and user_input[i-1] == ' ':
-        continue
-    my_text += user_input[i]
-print(my_text)
+def myfunc(*args):
+
+    sum = 0
+    for arg in args:
+        if isinstance(arg, int) and arg % 2 == 0:
+            sum += arg
+    return sum
+myfunc(1, 2, 'Hello', 4, 3)
