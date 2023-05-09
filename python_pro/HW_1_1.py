@@ -6,7 +6,7 @@
 В усіх класах має бути визначений метод str.
 """
 class Product:
-    def __init__(self, name, price, description):
+    def __init__(self, name: str, price: float, description: str):
         self.name = name
         self.price = price
         self.description = description
@@ -38,14 +38,11 @@ class Cart:
         return cart_info
 
 
-# Створення екземплярів класу "Product"
 product1 = Product("Ноутбук", 20000, "Потужний ноутбук для роботи")
 product2 = Product("Смартфон", 10000, "Сучасний смартфон з високоякісною камерою")
 
-# Виведення інформації про товари
 print(product1)
 print(product2)
-
 
 cart = Cart()
 cart.add_product(product1, 2)
