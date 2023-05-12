@@ -62,7 +62,6 @@ class Order:
         return total
 
 
-# Створення страв
 dish1 = Dish("Barszcz czerwony", "Tradycyjna polska zupa buraczkowa", 15)
 dish2 = Dish("Pierogi ruskie", "Klasyczne pierogi z nadzieniem z ziemniaków i twarogu", 22)
 dish3 = Dish("Kotlet schabowy", "Tradycyjna polska panierowana kotlet schabowy", 42)
@@ -76,37 +75,33 @@ dish10 = Dish("Zupa pomidorowa", "Zupa pomidorowa z ryżem i śmietaną", 13)
 dish11 = Dish("Kiełbasa z grilla", "Tradycyjna polska kiełbasa grillowana", 24)
 dish12 = Dish("Szarlotka", "Polskie jabłkowe ciasto z kruszonką", 19)
 
-# Створення категорій страв
 category1 = MenuCategory("Zupy", [dish1, dish5, dish10])
-category2 = MenuCategory("dania główne", [dish2, dish3, dish4, dish7, dish8, dish9, dish11])
+category2 = MenuCategory("Dania główne", [dish2, dish3, dish4, dish7, dish8, dish9, dish11])
 category3 = MenuCategory("Desery", [dish6, dish12])
 
-# Створення меню
 menu = Menu([category1, category2, category3])
 
-# Виведення інформації про меню
 print(menu)
 
-# Створення замовлення
 order = Order()
 
-# Додавання страв до замовлення
 order.add_item(dish1)
 order.add_item(dish2)
+order.add_item(dish4)
+order.add_item(dish7)
+order.add_item(dish9)
+order.add_item(dish12)
 
-# Виведення замовлення та загальної вартості
-print("Замовлення:")
+print("Zamawianie:")
 for item in order.items:
     print(item)
-print("Загальна вартість:", order.calculate_total(), "грн")
+print("Rachunek :", order.calculate_total(), "zl")
 
-# Видалення страви з замовлення
-order.remove_item(dish1)
+order.remove_item(dish2)
 
-# Оновлення загальної вартості після видалення
-print("Оновлене замовлення:")
+print("Racunek prawidlowy:")
 for item in order.items:
     print(item)
-print("Загальна вартість:", order.calculate_total(), "грн")
+print("Rachunek:", order.calculate_total(), "zl")
 
 
