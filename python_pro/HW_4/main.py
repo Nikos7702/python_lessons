@@ -1,3 +1,7 @@
+import logging
+
+logging.basicConfig(filename='log.txt', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 from discount import RegularDiscount, SilverDiscount, GoldDiscount
 from client import Client
 from dish import Dish
