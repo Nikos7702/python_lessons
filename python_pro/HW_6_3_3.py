@@ -3,16 +3,11 @@
 Верхня межа діапазону повинна бути задана параметром цієї функції.
 """
 def prime_numbers_generator(limit):
-    primes = []
     for num in range(2, limit + 1):
-        is_prime = True
-        for prime in primes:
-            if num % prime == 0:
-                is_prime = False
-                break
-        if is_prime:
-            primes.append(num)
+        if all(num % divisor != 0 for divisor in range(2, int(num ** 0.5) + 1)):
             yield num
 
 for prime in prime_numbers_generator(20):
     print(prime)
+
+
