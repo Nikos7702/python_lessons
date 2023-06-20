@@ -44,6 +44,7 @@ class Cart:
         self.index += 1
         return product
 
+
 if __name__ == '__main__':
     try:
         product1 = Product("Ноутбук", 20000, "Потужний ноутбук для роботи")
