@@ -1,5 +1,7 @@
 class ProperFraction:
     def __init__(self, numerator, denominator):
+        if denominator == 0:
+            raise ZeroDivisionError("Знаменник не може бути нулем.")
         self.numerator = numerator
         self.denominator = denominator
 
