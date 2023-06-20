@@ -62,7 +62,7 @@ cart2 = Cart()
 cart2.add_product(product3, 3)
 cart2.add_product(product4, 2)
 
-cart1 += cart2  # объединение корзин
+cart1 += cart2
 
-print(cart1)  # вывод информации о объединенной корзине
+print(cart1)
 
