@@ -44,14 +44,14 @@ class Cart:
         self.index += 1
         return product
 
-
-try:
-    product1 = Product("Ноутбук", 20000, "Потужний ноутбук для роботи")
-    product2 = Product("Смартфон", 10000, "Сучасний смартфон з високоякісною камерою")
-    product3 = Product("Планшет", 15000, "Компактний планшет з великим дисплеєм")
-    product4 = Product("Гарнітура", 500, "Бездротова гарнітура зі шумозаглушенням")
-except InvalidPriceException as e:
-    print("Виникла помилка:", str(e))
+if __name__ == '__main__':
+    try:
+        product1 = Product("Ноутбук", 20000, "Потужний ноутбук для роботи")
+        product2 = Product("Смартфон", 10000, "Сучасний смартфон з високоякісною камерою")
+        product3 = Product("Планшет", 15000, "Компактний планшет з великим дисплеєм")
+        product4 = Product("Гарнітура", 500, "Бездротова гарнітура зі шумозаглушенням")
+    except InvalidPriceException as e:
+        print("Виникла помилка:", str(e))
 
 print(product1)
 print(product2)
