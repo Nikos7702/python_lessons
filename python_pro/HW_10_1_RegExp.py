@@ -6,7 +6,7 @@ import re
 
 text = "rrbr Rbbbr Rbr rbR rbr RBR."
 
-pattern = r"[R]b+[r]"
+pattern = r'[R]b+[r]'
 
 res = re.findall(pattern, text)
 print(res)
